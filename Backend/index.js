@@ -18,6 +18,10 @@ app.use(cors())
 
 app.use("/BlogPersonalApp/blog",blogRoute);
 
+app.get("/",(req,res)=>{
+    res.status(200).send("server live")
+})
+
 app.listen(PORT,()=>{
     console.log("server is running")
     connect()
